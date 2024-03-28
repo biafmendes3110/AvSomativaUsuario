@@ -43,14 +43,14 @@ class _HomePageState extends State<Home> {
     setState(() {
       _textoInfo = "Cadastrado com sucesso!";
 
-      if (usuario != null){
+      if (usuario.isEmpty || senha.isEmpty){
         _textoInfo= "As informações estão incompletas";
       }
 
-      else if (senha != null){
-        _textoInfo= "As informações estão incompletas";
+      else {
+        _textoInfo= "Cadastrado com sucesso!";
       }
-      
+
     });
   }
   @override
